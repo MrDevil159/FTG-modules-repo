@@ -4,8 +4,7 @@
 \n.fexit"""
 from telethon import events
 
-
-@borg.on(events.NewMessage(outgoing=True, pattern='fexit'))
+@borg.on(events.NewMessage(pattern=r"\.fexit", outgoing=True))
 async def timer_blankx(e):
     txt = e.text[7:] + '\n\n`Processing....` '
     j = 1
